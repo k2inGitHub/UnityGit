@@ -1,0 +1,58 @@
+     _   _   _ _____ ___    _    ___ __  __ 
+    / \ | | | |_   _/ _ \  / \  |_ _|  \/  |
+   / _ \| | | | | || | | |/ _ \  | || |\/| |
+  / ___ \ |_| | | || |_| / ___ \ | || |  | |
+ /_/   \_\___/  |_| \___/_/   \_\___|_|  |_|
+  
+                    By 
+  
+     ______
+    /_____ \________________________
+      ^   \                         \
+    < o > |   The Game Mechanics  o |
+    __v___/ ________________________/
+    \______/
+ 
+      Copyright © 2012 Timothy Aidley
+ 
+ 
+GETTING STARTED:
+================
+For more in-depth documentation, see the website at:
+
+	http://www.thegamemechanics.co.uk/autoaim/
+
+CHOOSING YOUR TURRET TYPE:
+==========================
+AutoAim supports two turret types - basic and swivel-based.
+* BASIC TURRET:
+	The basic turret has a base node and a gun node. The base node
+	is static, whereas the gun node is aimed by AutoAim at the target.
+* SWIVEL TURRET:
+	The swivel turret has a static base just like the basic turret,
+	but the horizontal and vertical rotation of the barrel are split
+	in two parts. As a result it has a swivel base that rotates around
+	the Y axis and a child gun node that rotates on the X axis.
+	
+If in doubt, choose the basic turret!
+
+PREPARING YOUR MODEL:
+=====================
+You will need to ensure your turret model is set up something like this:
+BASIC TURRET:
+	o Base   <-- This is the object that holds the AutoAim components
+	   |
+	   +--- Gun		<-- This is the object that gets aimed.
+
+SWIVEL TURRET:
+	o Base   <-- This is the object that holds the AutoAim components
+	   |
+	   +--- Swivel	<-- This rotates around the Y axis
+	     |
+		 +--- Gun		<-- This is the object that gets aimed.
+
+USING THE TURRET WIZARD:
+========================
+Select Window -> AutoAim Turret Wizard to run the AutoAim Wizard, which 
+will guide you through the rest of the process.
+
